@@ -31,14 +31,13 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
 
 .group {
   display: flex;
-  flex-direction: column;
 }
 
 .item {
@@ -85,6 +84,10 @@ form {
   padding: 10px;
 }
 
+.form-group {
+  display: flex;
+}
+
 form label {
   font-weight: bold;
 }
@@ -117,3 +120,39 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  /* Insert desktop modifiers here */
+  .group {
+    flex-direction: row;
+  }
+  
+  form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dsk-input {
+    display: flex;
+    flex-direction: column;
+  }
+  .dsk-header {
+    display: flex;
+    flex-direction: row;
+  }
+
+  nav {
+    margin-left: 55%;
+  }
+
+  .centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form button {
+    width: 10%;
+  }
+}
