@@ -7,7 +7,7 @@ body {
 h2 {
   font-size: 26px;
   font-weight: 400;
-  margin: 0 10px 10px 10px;
+  margin: 0 10px 20px 10px;
   text-align: center;
 }
 
@@ -34,26 +34,11 @@ main img {
   width: 100%;
 }
 
-/* ---  Groups & Items --- */
-
-.group {
-  display: flex;
-}
-
-.item {
-  flex: 1;
-  margin: 10px;
-}
-
-.item-double {
-  flex: 2;
-}
-
 /* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   text-align: center;
 }
 
@@ -78,14 +63,30 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+.nav-group {
+  display: flex;
+  flex-direction: row;
+  width:50%;
+}
+
+.nav-item {
+  flex: 1;
+}
+
+.header-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-item {
+  flex: 1;
+}
+
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
   padding: 10px;
-}
-
-.form-group {
-  display: flex;
 }
 
 form label {
@@ -107,6 +108,63 @@ form button {
   width: 100%;
 }
 
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-subgroup {
+  flex-direction: row;
+}
+
+.form-item {
+  flex: 1;
+}
+
+.centered {
+  display: flex;
+}
+
+/* ------- About Section ------- */
+
+.about-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-item {
+  flex: 1;
+  margin: 0px 5px 20px 0px;
+}
+
+/* ------- Ideas Section ------- */
+
+.ideas-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.ideas-subgroup {
+  margin: -10px 0px;
+}
+
+.ideas-item {
+  flex: 1;
+  margin: 20px 0px 20px 0px;
+}
+
+/* ------- Hosting Section ------- */
+
+.host-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.host-item {
+  flex: 1;
+  margin: 10px;
+}
+
 /* -------  Footer ------- */
 
 footer {
@@ -122,37 +180,105 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 480px) {
-  /* Insert desktop modifiers here */
-  .group {
+  .header-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px;
+  }
+  
+  /* ------- Media Query: Search Form ------- */
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .form-subgroup {
     flex-direction: row;
   }
   
-  form {
-    display: flex;
-    justify-content: center;
+  .form-item {
+    flex: 1;
   }
-
-  .dsk-input {
-    display: flex;
-    flex-direction: column;
-  }
-  .dsk-header {
-    display: flex;
-    flex-direction: row;
-  }
-
-  nav {
-    margin-left: 55%;
-  }
-
+  
   .centered {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
-  
+
   form button {
-    width: 10%;
+    margin-right: 200px;
+    margin-top: 5px
+  }
+
+  form label {
+    margin-top: 10px;
+  }
+
+  /* ------- Media Query: Navigation ------- */
+
+  .nav-leftside {
+    margin-right: 36%;
+    margin-left: 5px;
+  }
+
+  .nav-rightside {
+    margin-left: 36%;
+    margin-right: 5px;
+  }
+
+  /* ------- Media Query: About Section ------- */
+
+  .about-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-item {
+    flex: 1;
+    display: flex;
+    margin: 0px 20px 20px 0px;
+  }
+
+  .about-p {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  /* ------- Media Query: Ideas Section ------- */
+
+  .ideas-subgroup {
+    flex: 1;
+    display: flex;
+  }
+
+  .ideas-item {
+    flex: 1;
+    margin: 20px 10px;
+  }
+
+  /* ------- Media Query: Hosting Section ------- */
+
+  .host-group {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .host-subgroup {
+    margin-top:auto;
+    margin-bottom: auto;
+  }
+
+  .host-item {
+    flex: 1;
+    margin: 10px;
+    display: flex;
+  }
+
+  .host-subitem {
+    flex: 1;
   }
 }
