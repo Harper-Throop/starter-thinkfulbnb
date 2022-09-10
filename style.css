@@ -79,10 +79,6 @@ header nav ul li a:hover {
   align-items: center;
 }
 
-.header-item {
-  flex: 1;
-}
-
 /* -------  Search Form ------- */
 form {
   border: 2px solid #ff385c;
@@ -226,8 +222,7 @@ footer p {
   }
 
   .nav-rightside {
-    margin-left: 36%;
-    margin-right: 5px;
+    margin-left: auto;
   }
 
   /* ------- Media Query: About Section ------- */
@@ -239,7 +234,7 @@ footer p {
 
   .about-item {
     flex: 1;
-    display: flex;
+    display: flexnpx;
     margin: 0px 20px 20px 0px;
   }
 
